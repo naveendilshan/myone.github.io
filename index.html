@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveen & Sasinika's Love Story</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@300;400;600&display=swap');
+
+        /* Background Video */
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #ffe3e3, #ffb3b3);
+            color: #333;
+        }
+
+        header {
+            background: rgba(255, 111, 97, 0.9);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-family: 'Parisienne', cursive;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            animation: slideIn 2s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: 'Parisienne', cursive;
+            color: #ff6f61;
+            font-size: 2.5em;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p, ul {
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+            border: 3px solid #ff6f61;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #ff6f61;
+            color: white;
+            font-size: 1.2em;
+            font-family: 'Parisienne', cursive;
+            margin-top: 30px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Countdown Timer */
+        #countdown {
+            font-size: 1.5em;
+            color: #ff6f61;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Button */
+        .button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ff4a3f;
+        }
+
+        /* Comments Section */
+        .comments {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .comments textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 2px solid #ff6f61;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        .comments button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .comments button:hover {
+            background-color: #ff4a3f;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video id="video-background" autoplay loop muted>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <header>
+        <h1>Naveen & Sasinika's Love Story</h1>
+        <p>Started on 24th August 2023 | Same age, same hearts, forever in love ❤️</p>
+    </header>
+
+    <!-- Countdown to Next Anniversary -->
+    <section>
+        <div id="countdown">
+            <p>Next Anniversary: <span id="countdown-timer"></span></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>About Us</h2>
+        <p>
+            Hello! I'm Naveen Dilshan Kuruppu, and my love is Sasinika Heshani. We are both 21 years old, born in 2003.  
+            I celebrate my birthday on 20th March, while Sasinika's birthday is on 22nd September.  
+            We first met during our physics class at Rotary, Nugegoda, and since then, our lives have been filled with love and beautiful memories.
+        </p>
+    </section>
+
+    <section>
+        <h2>Our Memories</h2>
+        <p>We cherish every moment we've spent together, from movie nights to exploring places like One Galle Face, Beddagana Water Park, and more. Here are some highlights of our journey:</p>
+        <ul>
+            <li>Watching movies at the film hall 🎬</li>
+            <li>Romantic evenings at One Galle Face 🏢</li>
+            <li>Peaceful walks at Beddagana Water Park 🌿</li>
+        </ul>
+    </section>
+
+   
+    <section>
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+            <img src="Picsart_24-07-31_22-48-10-056.jpg" alt="Memory 1">
+            <img src="Picsart_24-03-31_11-27-18-206.jpg" alt="Memory 2">
+            <img src="Picsart_24-03-10_21-19-03-898.jpg" alt="Memory 3">
+        </div>
+    </section>
+
+    <section>
+        <h2>Leave a Message</h2>
+        <div class="comments">
+            <textarea placeholder="Leave a comment..."></textarea>
+            <button>Submit</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Forever in love, Naveen & Sasinika ❤️</p>
+    </footer>
+
+    <!-- Countdown Script -->
+    <script>
+        // Countdown to next anniversary (24th August 2025)
+        function updateCountdown() {
+            const anniversaryDate = new Date("August 24, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+            const timeLeft = anniversaryDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown-timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+
+</body>
+</html>
